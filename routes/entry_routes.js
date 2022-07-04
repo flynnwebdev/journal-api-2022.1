@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
     if (err) {
       res.status(422).send({ error: err.message });
     } else {
-      res.status(401).send(doc);
+      res.status(201).send(doc);
     }
   });
 });

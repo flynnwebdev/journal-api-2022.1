@@ -2,12 +2,15 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const express = require("express");
+const cors = require("cors");
 const apiV1Routes = require("./routes");
 
 const categories = ["Food", "Coding", "Work", "Other"];
 
 const app = express();
 const port = 4000;
+
+app.use(cors())
 
 // app.use tells Express to execute some middleware at this stage
 // of the request-response cycle.
